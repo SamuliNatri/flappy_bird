@@ -3,7 +3,7 @@ cbuffer constants : register(b0)
     row_major float4x4 model;
     row_major float4x4 view;
     row_major float4x4 projection;
-	float4 color;
+    float4 color;
 };
 
 struct VS_Input
