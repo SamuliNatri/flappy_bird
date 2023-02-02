@@ -1,0 +1,1 @@
+<img src="flappy-small.png">
