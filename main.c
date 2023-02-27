@@ -73,6 +73,10 @@ float BirdHeight = 1.0f;
 mesh MeshPipe;
 
 int RectanglesIntersect(rectangle* A, rectangle* B) {
+    
+    // NOTE: only works when A < B
+    // we could flip them when A > B
+    
     if((A->Left >= B->Left && 
         A->Left <= B->Right ||
         A->Right >= B->Left && 
