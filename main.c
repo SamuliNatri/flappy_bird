@@ -74,8 +74,7 @@ mesh MeshPipe;
 
 int RectanglesIntersect(rectangle* A, rectangle* B) {
     
-    // NOTE: only works when A < B
-    // we could flip them when A > B
+    // TODO: Limited. Fix.
     
     if((A->Left >= B->Left && 
         A->Left <= B->Right ||
