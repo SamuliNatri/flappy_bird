@@ -73,20 +73,11 @@ float BirdHeight = 1.0f;
 mesh MeshPipe;
 
 int RectanglesIntersect(rectangle* A, rectangle* B) {
-    
-    // TODO: Limited. Fix.
-    
-    if((A->Left >= B->Left && 
-        A->Left <= B->Right ||
-        A->Right >= B->Left && 
-        A->Right <= B->Right) && 
-       (A->Top >= B->Bottom && 
-        A->Top <= B->Top ||
-        A->Bottom >= B->Bottom && 
-        A->Bottom <= B->Top)) {
-        return 1;
-    }
-    return 0;
+    if(A->Left > B->Right) return 0;
+    if(B->Left > A->Right) return 0;
+    if(A->Bottom > B->Top) return 0;
+    if(B->Bottom > A->Top) return 0;
+    return 1;
 }
 
 void AddEntityToArray(entity* Entity, entityArray* Array) {
